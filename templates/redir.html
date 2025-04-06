@@ -35,6 +35,24 @@
         opacity: 1;
       }
     }
+
+    /* Стилі для кнопки Redirect */
+    .redirect-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff; /* Синій фон */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .redirect-button:hover {
+      background-color: #0056b3; /* Трохи темніший синій при наведенні */
+    }
   </style>
 </head>
 <body>
@@ -42,12 +60,14 @@
     <div class="lock-icon">🎉</div>
     <b><h1>Redirecting to Telegram channel <span class="dots"><span>.</span><span>.</span><span>.</span></span></h1></b>
     <p>Your IP address: {{ user_ip }}</p>
+    <!-- Кнопка Redirect -->
+    <a href="{{ url_for('redircet') }}" class="redirect-button">Redirect</a>
   </div>
   <script type="text/javascript">
     // Через 3 секунди відбувається редірект
     setTimeout(function() {
         window.location.href = "{{ url_for('redircet') }}";  // Редірект на інший маршрут
-    }, 1500);  // 3000 мілісекунд = 3 секунди
+    }, 1500);  // 1500 мілісекунд = 1.5 секунди
   </script>
 </body>
 </html>
