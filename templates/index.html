@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access Restricted</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="lock-icon">🔒</div>
+    <h1>Access is restricted due to local regulations</h1>
+    <p>This service is not available to users in the United Kingdom.</p>
+    <p>Your IP address: {{ user_ip }}</p>
+  </div>
+</body>
+</html>

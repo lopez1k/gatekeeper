@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access Restricted</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+  <style>
+    /* Клас для трьох крапок */
+    .dots {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Анімація для появи крапок */
+    .dots span {
+      opacity: 0;
+      animation: dot 1s forwards;
+    }
+
+    .dots span:nth-child(1) {
+      animation-delay: 0s; /* Перша крапка з'являється одразу */
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 0.5s; /* Друга крапка з'являється через 1 секунду */
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 1s; /* Третя крапка з'являється через 2 секунди */
+    }
+
+    /* Ключова анімація для крапок */
+    @keyframes dot {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lock-icon">🎉</div>
+    <b><h1>Redirecting to Telegram channel <span class="dots"><span>.</span><span>.</span><span>.</span></span></h1></b>
+    <p>Your IP address: {{ user_ip }}</p>
+  </div>
+  <script type="text/javascript">
+    // Через 3 секунди відбувається редірект
+    setTimeout(function() {
+        window.location.href = "{{ url_for('redircet') }}";  // Редірект на інший маршрут
+    }, 1500);  // 3000 мілісекунд = 3 секунди
+  </script>
+</body>
+</html>
