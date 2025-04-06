@@ -21,7 +21,7 @@ def verify():
     if is_uk_ip(ip):
         return render_template('index.html', user_ip = ip)
     else:
-        return render_template('redir.html', user_ip = ip)
+        return redirect('https://t.me/pscommunity24')
 
 @app.route("/redirect_page")
 def redircet():
