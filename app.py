@@ -16,7 +16,7 @@ def is_uk_ip(ip):
 
 @app.route("/")
 def verify():
-    ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0]
     print(ip)
     if is_uk_ip(ip):
         return render_template('index.html', user_ip = ip)
