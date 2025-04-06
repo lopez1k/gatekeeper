@@ -21,7 +21,7 @@ def verify():
     if is_uk_ip(ip):
         return render_template('index.html', user_ip = ip)
     else:
-        return redirect('https://t.me/Helena_137') 
+        return f"Your IP: {ip}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
