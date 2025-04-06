@@ -25,7 +25,7 @@ def verify():
 
 @app.route("/redirect_page")
 def redircet():
-    return redirect('https://t.me/lopez1k')
+    return redirect('https://t.me/pscommunity24')
 
 
 
