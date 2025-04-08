@@ -47,11 +47,6 @@
     <!-- Кнопка Redirect -->
     <a href="{{ url_for('redircet') }}" class="redirect-button">Redirect</a>
   </div>
-  <script type="text/javascript">
-    // Через 3 секунди відбувається редірект
-    setTimeout(function() {
-        window.location.href = "{{ url_for('redircet') }}";  // Редірект на інший маршрут
-    }, 2500);  // 1500 мілісекунд = 1.5 секунди
-  </script>
+  
 </body>
 </html>

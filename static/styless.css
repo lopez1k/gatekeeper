@@ -10,7 +10,7 @@ body {
   
   .container {
     text-align: center;
-    padding: 40px;
+    padding: 100px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -23,13 +23,13 @@ body {
   }
   
   h1 {
-    font-size: 22px;
+    font-size: 30px;
     color: #2fda40;
     margin-bottom: 15px;
   }
   
   p {
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
   }
 
@@ -41,7 +41,7 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 18px; /* Збільшення розміру шрифта */
+    font-size: 40px; /* Збільшення розміру шрифта */
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
